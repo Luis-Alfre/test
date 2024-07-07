@@ -1,4 +1,6 @@
 from django.db import models
+from django.core.exceptions import ValidationError
+from django.core.validators import validate_email
 
 class Student(models.Model):
     name = models.CharField(max_length=100)
@@ -10,3 +12,5 @@ class Student(models.Model):
 
     def __str__(self):
         return self.name
+
+    
